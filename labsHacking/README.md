@@ -31,6 +31,19 @@ pip install -r requirements.txt
 Ouvrez le fichier index.html dans votre navigateur Web.
 Top 10 des scripts Python pour ethical hacking
 
+# Tableau de synthèse
+
+| Script | Langue | Fonctionnalité |
+|---|---|---|
+| portscanner.py | Python | Scanne les ports ouverts sur un serveur ou un appareil. |
+| sqlmap.py | Python | Identifie et exploite les vulnérabilités SQL injection. |
+| metasploit.py | Python | Utilise le framework Metasploit pour lancer des attaques contre des systèmes. |
+| nmap.py | Python | Lance des scans réseau pour identifier les vulnérabilités. |
+| nikto.py | Python | Lance des scans de vulnérabilités sur des sites Web. |
+| owasp-zap.py | Python | Utilise l'outil OWASP ZAP pour identifier les vulnérabilités. |
+| wpscan.py | Python | Identifie et exploite les vulnérabilités de WordPress. |
+| john-the-ripper.py | Python | Craque les mots de passe en utilisant la force brute ou des dictionnaires. |
+
 ### Script : portscanner.py
 Ce script scanne les ports ouverts sur un serveur ou un appareil.
 
