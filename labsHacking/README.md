@@ -191,30 +191,44 @@ Utilisez le code avec précaution. En savoir plus
 
 ### Script : owasp-zap.py
 
-Ce script utilise l'outil OWASP ZAP pour identifier les vulnérabilités.
+Pour que le script fonctionne correctement, il doit se connecter à OWASP ZAP et lui demander d'effectuer un scan du site Web spécifié par l'utilisateur. Le script peut utiliser la bibliothèque zapapi pour se connecter à OWASP ZAP.
+
+Voici un exemple de code qui permet au script de se connecter à OWASP ZAP et d'effectuer un scan du site Web spécifié par l'utilisateur :
 
 ```Python
-import requests
+import zapapi
 
 def main():
     # Demander à l'utilisateur l'adresse URL du site Web à scanner
     url = input("Adresse URL du site Web à scanner : ")
 
+    # Se connecter à OWASP ZAP
+    zap = zapapi.Zap()
+    zap.open()
+
     # Lancer un scan ZAP
-    request = requests.get("https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy")
+    scan = zap.spider.scan(url)
+    scan.wait()
 
     # Analyser la réponse HTTP pour détecter les vulnérabilités
-    if "vulnérabilité" in request.text:
-        print("Le site Web {} est vulnérable".format(url))
-    else:
-        print("Le site Web {} n'est pas vulnérable".format(url))
+    vulnerabilities = scan.get_results()
+    for vulnerability in vulnerabilities:
+        print("Le site Web {} est vulnérable à {}".format(url, vulnerability.name))
 
 if __name__ == "__main__":
     main()
 ```
 
 Utilisez le code avec précaution. En savoir plus
+Ce code fonctionne de la manière suivante :
 
+La fonction main() demande à l'utilisateur l'adresse URL du site Web à scanner.
+La fonction main() se connecte à OWASP ZAP en utilisant la fonction open() de la bibliothèque zapapi.
+La fonction main() lance un scan ZAP en utilisant la fonction scan() de la bibliothèque zapapi. La fonction scan() prend l'adresse URL du site Web à scanner en paramètre.
+La fonction main() attend que le scan soit terminé en utilisant la méthode wait().
+La fonction main() analyse la réponse HTTP pour détecter les vulnérabilités en utilisant la méthode get_results(). La méthode get_results() renvoie une liste des vulnérabilités trouvées.
+La fonction main() affiche les informations sur chaque vulnérabilité trouvée.
+Ce code permet au script de détecter une plus large gamme de vulnérabilités que le code original.
 ### Script : wpscan.py
 
 Ce script identifie et exploite les vulnérabilités de WordPress.
