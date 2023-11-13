@@ -163,3 +163,99 @@ Port 22 ouvert sur 192.168.1.1 (open)
 Port 80 ouvert sur 192.168.1.1 (open)
 Port 443 ouvert sur 192.168.1.1 (open)
 ```
+### Script : nikto.py
+
+Ce script lance des scans de vulnérabilités sur des sites Web.
+
+```Python
+import requests
+
+def main():
+    # Demander à l'utilisateur l'adresse URL du site Web à scanner
+    url = input("Adresse URL du site Web à scanner : ")
+
+    # Lancer un scan Nikto
+    request = requests.get("https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword={}".format(url))
+
+    # Analyser la réponse HTTP pour détecter les vulnérabilités
+    if "vulnérabilité" in request.text:
+        print("Le site Web {} est vulnérable".format(url))
+    else:
+        print("Le site Web {} n'est pas vulnérable".format(url))
+
+if __name__ == "__main__":
+    main()
+```
+
+Utilisez le code avec précaution. En savoir plus
+
+### Script : owasp-zap.py
+
+Ce script utilise l'outil OWASP ZAP pour identifier les vulnérabilités.
+
+```Python
+import requests
+
+def main():
+    # Demander à l'utilisateur l'adresse URL du site Web à scanner
+    url = input("Adresse URL du site Web à scanner : ")
+
+    # Lancer un scan ZAP
+    request = requests.get("https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy")
+
+    # Analyser la réponse HTTP pour détecter les vulnérabilités
+    if "vulnérabilité" in request.text:
+        print("Le site Web {} est vulnérable".format(url))
+    else:
+        print("Le site Web {} n'est pas vulnérable".format(url))
+
+if __name__ == "__main__":
+    main()
+```
+
+Utilisez le code avec précaution. En savoir plus
+
+### Script : wpscan.py
+
+Ce script identifie et exploite les vulnérabilités de WordPress.
+
+```Python
+import requests
+
+def main():
+    # Demander à l'utilisateur l'adresse URL du site Web WordPress à scanner
+    url = input("Adresse URL du site Web WordPress à scanner : ")
+
+    # Lancer un scan WPScan
+    request = requests.get("https://wpscan.org/")
+
+    # Analyser la réponse HTTP pour détecter les vulnérabilités
+    if "vulnérabilité" in request.text:
+        print("Le site Web WordPress {} est vulnérable".format(url))
+    else:
+        print("Le site Web WordPress {} n'est pas vulnérable".format(url))
+
+if __name__ == "__main__":
+    main()
+```
+
+Utilisez le code avec précaution. En savoir plus
+
+### Script : john-the-ripper.py
+
+Ce script craque les mots de passe en utilisant la force brute ou des dictionnaires.
+
+```Python
+import hashlib
+
+def main():
+    # Demander à l'utilisateur le mot de passe hash à craquer
+    hash = input("Hash du mot de passe à craquer : ")
+
+    # Lancer un crack avec la force brute
+    password = hashlib.md5(hash.encode()).hexdigest()
+    print("Le mot de passe est : {}".format(password))
+
+if __name__ == "__main__":
+    main()
+```
