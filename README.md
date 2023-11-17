@@ -7,3 +7,7 @@ Python Course Projects
 
 ## All Tools
 - https://github.com/sanogotech/WebGuardian
+
+## Python  Crash  Course
+
+- https://github.com/sanogotech/pythoncrashcourse_2e
