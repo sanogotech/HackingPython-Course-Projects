@@ -29,3 +29,9 @@ bWAPP (bee-box): bWAPP est un autre projet qui propose une application web volon
 Juice Shop: Juice Shop est une application web vulnérable écrite en Node.js, qui est également utilisée comme environnement d'apprentissage pour les tests de sécurité.
 
 Lors de l'utilisation de ces applications, il est important de respecter les lois et réglementations en vigueur dans votre région, et de les utiliser uniquement dans un environnement contrôlé et à des fins éducatives. Utiliser ces outils pour tester des applications ou des systèmes sans autorisation appropriée peut être illégal.
+Django.nV: Il s'agit d'une version vulnérable de Django, un framework web en Python. Django.nV est conçu pour fournir une plateforme éducative où les utilisateurs peuvent apprendre à identifier et à corriger des vulnérabilités courantes.
+
+Flask-Vulnerable-Web-Application: Il s'agit d'une application web vulnérable basée sur le framework Flask en Python. Elle offre une plateforme d'apprentissage pour comprendre les vulnérabilités web.
+
+WebSecurity Dojo: Bien que ce ne soit pas spécifiquement en Python, WebSecurity Dojo est un projet qui contient plusieurs applications vulnérables, y compris certaines écrites en Python. Il est conçu pour être utilisé comme un laboratoire d'entraînement pour les professionnels de la sécurité.
+
