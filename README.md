@@ -45,6 +45,9 @@ Django.nV: Il s'agit d'une version vulnérable de Django, un framework web en Py
 
 Il s'agit d'une application web vulnérable basée sur le framework Flask en Python. Elle offre une plateforme d'apprentissage pour comprendre les vulnérabilités web.
 
+* https://github.com/sanogotech/Vulnerable-Flask-App
+
+  
 **WebSecurity Dojo:**
 
 Bien que ce ne soit pas spécifiquement en Python, WebSecurity Dojo est un projet qui contient plusieurs applications vulnérables, y compris certaines écrites en Python. Il est conçu pour être utilisé comme un laboratoire d'entraînement pour les professionnels de la sécurité.
